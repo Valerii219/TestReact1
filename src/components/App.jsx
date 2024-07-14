@@ -21,7 +21,7 @@ export const App = () => {
        avatar={user.avatar} 
        stats={user.stats}/>
        <Statistics title="Upload stats" stats={data} />
-       <Statistics stats={data} />
+   
     </div>
     
   );

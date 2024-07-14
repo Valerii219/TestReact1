@@ -1,25 +1,15 @@
 export function  Statistics ({title, stats}){
     return (
         <section class="statistics">
-  <h2 class="title">{title}</h2>
-
-  <ul class="stat-list">
-    <li key={stats.id} class="item">
-      <span class="label">{stats.label}</span>
-      <span class="percentage">{stats.percentage}</span>
+  {title && <h2>{title}</h2>}
+  <ul className="stat-list">
+    {stats.map(stat=>(
+      <li key={stat.id} class="item">
+      <span className="label">{stat.label}</span>
+      <span className="percentage">{Number(stat.percentage)}</span>
     </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
+    ))}
+    
   </ul>
 </section>
     )}
